@@ -1,0 +1,17 @@
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\bin\Debug\net6.0-windows\ResenyasPeliculas.exe
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\bin\Debug\net6.0-windows\ResenyasPeliculas.deps.json
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\bin\Debug\net6.0-windows\ResenyasPeliculas.runtimeconfig.json
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\bin\Debug\net6.0-windows\ResenyasPeliculas.dll
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\bin\Debug\net6.0-windows\ResenyasPeliculas.pdb
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.pantallaPrincipal.resources
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.csproj.GenerateResource.cache
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.AssemblyInfoInputs.cache
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.AssemblyInfo.cs
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.csproj.CoreCompileInputs.cache
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.dll
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\refint\ResenyasPeliculas.dll
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.pdb
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.genruntimeconfig.cache
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ref\ResenyasPeliculas.dll
+C:\Users\dqche\Documents\Programas C#\ResenyasPeliculas\obj\Debug\net6.0-windows\ResenyasPeliculas.Properties.Resources.resources

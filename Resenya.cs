@@ -14,7 +14,7 @@ namespace ResenyasPeliculas
         public string Contenido {  get; set; }
         public bool Recomendado { get; set; }
         public string Generos {  get; set; }
-        public string ImagenPath { get; set; }
+        public byte[] Imagen { get; set; }
         public char Tipo {  get; set; }
 
         public Resenya(
@@ -25,7 +25,7 @@ namespace ResenyasPeliculas
             double nota,
             string contenido,
             bool recomendado,
-            string imagenPath
+            byte[] imagen
         ) 
         { 
             this.Tipo = tipo;
@@ -35,7 +35,7 @@ namespace ResenyasPeliculas
             this.Nota = nota;
             this.Contenido = contenido;
             this.Recomendado = recomendado;
-            this.ImagenPath = imagenPath;
+            this.Imagen = imagen;
         }
 
         public static Resenya cargarResenya(BinaryReader br)
@@ -47,7 +47,13 @@ namespace ResenyasPeliculas
             double nota = br.ReadDouble();
             string contenido = br.ReadString();
             bool recomendado = br.ReadBoolean();
-            string imagenPath = br.ReadString();
+            Image imagen;
+            int tam = br.ReadInt32();
+            byte[] arrImage = new byte[tam];
+            for (int i = 0; i < tam; i++)
+            {
+                arrImage[i] = br.ReadByte();
+            }
 
             return new Resenya(
                 tipo,
@@ -57,7 +63,7 @@ namespace ResenyasPeliculas
                 nota,
                 contenido, 
                 recomendado,
-                imagenPath
+                arrImage
             );
         }
 
@@ -70,7 +76,8 @@ namespace ResenyasPeliculas
             bw.Write(Nota);
             bw.Write(Contenido);
             bw.Write(Recomendado);
-            bw.Write(ImagenPath);
+            bw.Write(Imagen.Length);
+            bw.Write(Imagen);
         }
 
     }

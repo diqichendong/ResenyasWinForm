@@ -42,6 +42,7 @@ namespace ResenyasPeliculas
                 {
                     this.lista.Add(Resenya.cargarResenya(br));
                 }
+
                 br.Close();
             }
             catch (Exception ex) { }
@@ -63,6 +64,7 @@ namespace ResenyasPeliculas
                     r.guardarResenya(bw);
                 }
                 bw.Close();
+                MessageBox.Show("Datos guardados.");
             }
             catch (Exception ex) { }
         }
@@ -92,7 +94,7 @@ namespace ResenyasPeliculas
                 actualizarBotonesNav();
 
                 Resenya r = lista[actual];
-                imgPoster.Image = Image.FromFile(r.ImagenPath);
+                imgPoster.Image = arrayAImage(r.Imagen);
                 switch (r.Tipo)
                 {
                     case 'P':
@@ -243,7 +245,18 @@ namespace ResenyasPeliculas
 
                 if (datosCorrectos)
                 {
-                    lista.Add(new Resenya(tipo, titulo, anyo, generos, nota, contenido, recomendado, imagenPath));
+                    lista.Add(
+                        new Resenya(
+                            tipo,
+                            titulo,
+                            anyo,
+                            generos,
+                            nota,
+                            contenido,
+                            recomendado,
+                            imageAArray(Image.FromFile(imagenPath))
+                        )
+                    );
                     this.ultimoImagenPath = "";
                     btnCrear.Text = "Crear";
                     btnBorrar.Text = "Borrar";
@@ -297,18 +310,13 @@ namespace ResenyasPeliculas
             }
             else
             {
-                if (actual == lista.Count - 1)
+                lista.Remove(lista[actual]);
+                if (lista.Count - 1 < actual)
                 {
-                    lista.Remove(lista[actual]);
-                    actual--;
-                }
-                else if (lista.Count == 1)
-                {
-
-                }
-                else
-                {
-                    lista.Remove(lista[actual]);
+                    if (actual > 0)
+                    {
+                        actual--;
+                    }
                 }
 
                 actualizarVista();
@@ -318,7 +326,26 @@ namespace ResenyasPeliculas
         // Evento al cerrar la aplicación
         private void pantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            btnGuardar_Click(null, null);
+            btnGuardar_Click(sender, e);
+        }
+
+        // Convierte de byte[] a Image
+        private Image arrayAImage(byte[] arr)
+        {
+            using (MemoryStream ms = new MemoryStream(arr))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+        // Convierte de Image a byte[]
+        private byte[] imageAArray(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, img.RawFormat);
+                return ms.ToArray();
+            }
         }
     }
 }

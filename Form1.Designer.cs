@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pantallaPrincipal));
             lblTotal = new Label();
             lblTitulo = new Label();
             txtTitulo = new TextBox();
@@ -120,7 +119,7 @@
             // 
             // imgPoster
             // 
-            imgPoster.BackgroundImage = (Image)resources.GetObject("imgPoster.BackgroundImage");
+            imgPoster.BackgroundImage = Properties.Resources._default;
             imgPoster.BackgroundImageLayout = ImageLayout.Stretch;
             imgPoster.Location = new Point(101, 93);
             imgPoster.Name = "imgPoster";
